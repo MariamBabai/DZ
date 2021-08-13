@@ -1,0 +1,95 @@
+body
+{
+   background-color: rgb(226, 112, 31);
+   background-image: url(3.png);
+   background-repeat: no-repeat;
+
+background-position-x: center;
+background-position-y: 120px;
+   background-size: 800px;
+
+}
+.container {
+    display: none;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    background-color: rgb(226, 112, 31);
+    background-image: url(4.png);
+    background-repeat: no-repeat;
+    background-size: 300px;
+    width: 100vw;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+    font-size: 35px;
+    text-align: center;
+}
+
+
+.container .form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   
+    margin: auto;
+    opacity: 100%;
+}
+.formInner{
+    margin: 15px;
+    
+}
+
+.form input {
+    padding: 10px;
+    width: 320px;
+    font-size: 1rem;
+}
+button {
+    margin-top: 10px;
+    font-size: 2rem;
+    background-color:rgb(226, 112, 31) ;
+    border-style: none;
+    
+}
+button:hover
+{
+    color: white;
+    cursor: pointer;
+}
+
+
+#beerContainer {
+    color:white;
+    font-size: 2rem;
+    text-align: center;
+    background-color: rgb(104, 65, 20);
+   
+}
+
+.close-btn{
+    margin: auto;
+    text-align: center;
+    
+}
+
+.close-btn p{
+    font-size: 40px;
+    display: inline-block;
+    font-weight: bolder;
+    font-style: bold;
+    padding: 15px;
+    cursor: pointer;
+    
+}
+.close-btn:hover
+{
+color:white;
+}
+
+.d-none{
+    display: none;
+}
+.d-flex{
+    display: flex;
+}
