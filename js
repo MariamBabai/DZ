@@ -2,6 +2,7 @@ const NAME_FIELD = document.getElementById('beerName');
 const IMG_FIELD = document.getElementById('beerImgSrc');
 const DESCR_FIELD = document.getElementById('beerDescription');
 const BEER_CONTAINER = document.getElementById('beerContainer');
+const FAV_CONTAINER = document.getElementById('favouritesContainer');
 
 const ADD_BUTTON = document.getElementById('addBtn');
 
@@ -13,14 +14,9 @@ function clearValues() {
     DESCR_FIELD.value = '';
 }
 
-function render() {
-    let html = '';
-
-    BEERS.forEach((item) => {
-        html += item.getHtml();
-    })
-
-    BEER_CONTAINER.innerHTML = html;
+function render(newBeer) {
+    
+    BEER_CONTAINER.innerHTML += newBeer.getHtml();
 }
 
 function Beer(name, imgSrc, description) {
@@ -36,8 +32,10 @@ Beer.prototype.logBeer = function () {
 
 Beer.prototype.getHtml = function () {
     return `
-        <div>
-            <span>${this.name}</span>
+        <div class = "card">
+        <p>${this.name}</p>
+        <img src = "${this.imgSrc}">
+        <p>${this.description}</p>    
         </div>
     `
 }
@@ -51,9 +49,8 @@ ADD_BUTTON.addEventListener('click', function addBeer() {
 
     console.log('BEER ARRAY: ');
     console.log(BEERS);
-
     clearValues();
-    render();
+    render(newBeer);
 });
 
 const CLOSE_BTN = document.querySelector('.close-btn');
@@ -68,3 +65,23 @@ ADD_BUTTON.addEventListener('click',function () {
     CLOSE_BTN.classList.toggle('d-none');
     CONTAINER.classList.toggle('d-flex');
 });
+
+let favourites = [];
+
+function addToFavourites(beerName)
+{
+    let html = '';
+    favourites.push(beerName);
+    console.log(favourites);
+    favourites.forEach((name) => html += `<div>${name}</div>`)
+    FAV_CONTAINER.innerHTML = html;
+}
+
+BEER_CONTAINER.addEventListener('click', function addToFavouritesListener(MouseEvent)
+{
+   
+event.target.classList.toggle('favourite');
+const beerName = event.target.innerText.split('\n')[0];
+addToFavourites(beerName);
+});
+
