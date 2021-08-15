@@ -7,6 +7,7 @@ body
 background-position-x: center;
 background-position-y: 120px;
    background-size: 800px;
+   
 
 }
 .container {
@@ -59,13 +60,17 @@ button:hover
 }
 
 
+
+
 #beerContainer {
+    display: block;
     color:white;
     font-size: 2rem;
     text-align: center;
-    background-color: rgb(104, 65, 20);
+    
    
 }
+
 
 .close-btn{
     margin: auto;
@@ -87,9 +92,51 @@ button:hover
 color:white;
 }
 
+/* #cardBeer {
+    background-color: darkgrey;
+    padding: 20px 60px;
+    box-shadow: 0 10px 15px black;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 20px;
+    width: 30px;
+    height: 100px;
+} */
+
+.cards {
+    padding: 180px 0 0 0;
+   
+
+}
+
+.card {
+    cursor: pointer;
+    background-color: #4e2b0c;
+    padding: 30px 60px;
+    box-shadow: 0 10px 15px 0 black;
+    border-radius: 50px;
+    margin: 30px 30px;
+    height: 100px;
+    width: 50px;
+    display: inline-block;
+
+}
+.card p {
+    font-size: 20px;
+    padding: 0 0 10px 0;
+}
+
+
+
 .d-none{
     display: none;
 }
 .d-flex{
     display: flex;
+}
+
+
+.favourite
+{
+    background-color: rgb(243, 222, 34);
 }
