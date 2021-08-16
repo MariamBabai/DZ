@@ -79,7 +79,10 @@ function addToFavourites(beerName)
 
 BEER_CONTAINER.addEventListener('click', function addToFavouritesListener(MouseEvent)
 {
-   
+   if(!event.target)
+   {
+       return;
+   }
 event.target.classList.toggle('favourite');
 const beerName = event.target.innerText.split('\n')[0];
 addToFavourites(beerName);
