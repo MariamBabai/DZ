@@ -3,9 +3,8 @@ body
    background-color: rgb(226, 112, 31);
    background-image: url(3.png);
    background-repeat: no-repeat;
-
-background-position-x: center;
-background-position-y: 120px;
+   background-position-x: center;
+   background-position-y: 130px;
    background-size: 800px;
    
 
@@ -23,8 +22,9 @@ background-position-y: 120px;
     height: 100%;
     margin: auto;
     position: absolute;
-    font-size: 35px;
+    font-size: 30px;
     text-align: center;
+    font-family: fantasy;
 }
 
 
@@ -32,7 +32,6 @@ background-position-y: 120px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-   
     margin: auto;
     opacity: 100%;
 }
@@ -44,13 +43,14 @@ background-position-y: 120px;
 .form input {
     padding: 10px;
     width: 320px;
-    font-size: 1rem;
+    font-size: 16px;
 }
 button {
     margin-top: 10px;
-    font-size: 2rem;
+    font-size: 35px;
     background-color:rgb(226, 112, 31) ;
     border-style: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     
 }
 button:hover
@@ -75,6 +75,7 @@ button:hover
 .close-btn{
     margin: auto;
     text-align: center;
+    font-family:fantasy;
     
 }
 
@@ -92,38 +93,24 @@ button:hover
 color:white;
 }
 
-/* #cardBeer {
-    background-color: darkgrey;
-    padding: 20px 60px;
-    box-shadow: 0 10px 15px black;
-    border-radius: 10px;
-    cursor: pointer;
-    margin: 20px;
-    width: 30px;
-    height: 100px;
-} */
 
 .cards {
     padding: 180px 0 0 0;
-   
-
 }
 
 .card {
     cursor: pointer;
     background-color: #4e2b0c;
     padding: 30px 60px;
-    box-shadow: 0 10px 15px 0 black;
+    box-shadow: 0 10px 10px 0 black;
     border-radius: 50px;
     margin: 30px 30px;
-    height: 100px;
-    width: 50px;
     display: inline-block;
 
 }
 .card p {
-    font-size: 20px;
-    padding: 0 0 10px 0;
+    font-size: 21px;
+    padding: 0 0 8px 0;
 }
 
 
@@ -138,5 +125,5 @@ color:white;
 
 .favourite
 {
-    background-color: rgb(243, 222, 34);
+    background-color: rgb(247, 202, 6);
 }
